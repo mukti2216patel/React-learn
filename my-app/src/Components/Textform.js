@@ -33,7 +33,7 @@ export default function Textform(props) {
   const readingTime = (0.008 * wordCount).toFixed(2);
 
   return (
-    <div className="container d-flex flex-column justify-content-center align-items-center min-vh-100">
+   <div className={`container d-flex flex-column justify-content-center align-items-center min-vh-100 text-${props.mode === 'light' ? 'black' : 'white'}`}>
       <div className="w-100" style={{ maxWidth: "720px" }}>
         <label htmlFor="inputTextArea" className="form-label h5">
           {props.heading}
@@ -44,22 +44,23 @@ export default function Textform(props) {
           rows="8"
           value={text}
           onChange={handleOnChange}
+          style={{backgroundColor: props.mode==='light' ? 'white' : 'grey' , color:props.mode==='light' ? 'black' : 'white'}}
         ></textarea>
 
         <div className="d-flex flex-wrap gap-2 mb-4">
           <button className="btn btn-primary" onClick={handleOnClick}>
             Change to Uppercase
           </button>
-          <button className="btn btn-secondary" onClick={handleLoClick}>
+          <button className="btn btn-primary" onClick={handleLoClick}>
             Change to Lowercase
           </button>
-          <button className="btn btn-secondary" onClick={handleClearClick}>
+          <button className="btn btn-primary" onClick={handleClearClick}>
             Clear Text
           </button>
-          <button className="btn btn-success" onClick={handleCopyClick}>
+          <button className="btn btn-primary" onClick={handleCopyClick}>
             Copy Text
           </button>
-          <button className="btn btn-warning" onClick={handleRemoveSpacesClick}>
+          <button className="btn btn-primary" onClick={handleRemoveSpacesClick}>
             Remove Extra Spaces
           </button>
         </div>
