@@ -1,31 +1,38 @@
 import React, { useState } from "react";
 
+
 export default function Textform(props) {
   const [text, setText] = useState("enter text here");
 
   function handleOnChange(event) {
     setText(event.target.value);
+    
   }
 
   function handleOnClick() {
     setText(text.toUpperCase());
+    props.showAlert("Convert to UpperCase" , "success");
   }
-
+  
   function handleClearClick() {
     setText("");
+    props.showAlert("Text is clear" , "success");
   }
 
   function handleLoClick() {
     setText(text.toLowerCase());
+    props.showAlert("Convert to LowerCase" , "success");
   }
 
   function handleCopyClick() {
     navigator.clipboard.writeText(text);
     alert("Text copied to clipboard!");
+    props.showAlert("Text is copied to clipboard" , "success");
   }
 
   function handleRemoveSpacesClick() {
     setText(text.replace(/\s+/g, " ").trim());
+    props.showAlert("All extra space is removed" , "success");
   }
 
   const wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
