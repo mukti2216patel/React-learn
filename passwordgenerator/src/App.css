@@ -1,0 +1,107 @@
+/* App.css */
+
+/* Body styling with black background and white text */
+body {
+  background-color: #000; /* black background */
+  color: #fff; /* white text color */
+  font-family: Arial, sans-serif; /* Adding a basic font */
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the entire container */
+.container {
+  width: 100%;
+  max-width: 24rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #2d3748; /* dark gray */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+}
+
+/* Styling for the password input section */
+.password-display {
+  display: flex;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-top: 0.75rem;
+}
+
+/* Styling for the password input */
+.password-input {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  background-color: #edf2f7; /* light gray */
+  font-size: 1rem;
+  color: #2d3748; /* dark gray */
+  outline: none;
+}
+
+/* Styling for the copy button */
+.copy-button {
+  background-color: #f97316; /* Orange color */
+  color: white;
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+}
+
+/* Add hover effect to the button */
+.copy-button:hover {
+  background-color: #ea580c; /* Darker orange for hover */
+}
+
+/* Styling for the control panel */
+.controls {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #fff; /* White color for text in controls */
+}
+
+/* Styling for each control section */
+.control {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Styling for the range input (slider) */
+.slider {
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Styling for checkboxes */
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* Label for each control element */
+label {
+  color: #edf2f7; /* light gray */
+}
+
+/* Adjust label styling for orange highlights */
+input[type="checkbox"]:checked + label {
+  color: #f97316; /* Orange color when checked */
+}
+
+/* Add specific styles for the range slider label */
+label {
+  font-size: 1rem;
+  color: #edf2f7; /* light gray */
+}
+
+/* Add general styling for the slider */
+.slider {
+  height: 5px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
