@@ -1,21 +1,15 @@
-/* styles.css */
 
-/* Background and layout styling */
-/* App.css */
-
-/* For the full screen container */
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Ensure that the height is 100% of the viewport */
+  height: 100%; 
 }
 .app-container {
-
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center; /* Horizontally center */
-  align-items: center; /* Vertically center */
+  justify-content:center;
+  align-items: center; 
   background-image: url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
   background-position: center;
