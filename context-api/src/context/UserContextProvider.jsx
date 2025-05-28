@@ -1,11 +1,11 @@
+import { useState } from 'react'
 import UserContext from './UserContext'
 
 function UserContextProvider({children}) {
-    let obj = {
-    name : "srwfjf"
-    }
+    const [user , setUser] = useState('');
+   
   return (
-    <UserContext.Provider value={obj}>
+    <UserContext.Provider value={{user , setUser}}>
         {children}
     </UserContext.Provider>
   )
