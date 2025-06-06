@@ -1,35 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import AddTodo from './components/AddTodo'
+import Todos from './components/Todos'
+import { Provider } from 'react-redux'
+import { store } from './app/store'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <Provider store={store}>
+      <div className="min-h-screen w-screen flex items-center justify-center bg-gray-900">
+        <div className="w-full max-w-2xl bg-[#0c1022] p-6 rounded-lg shadow-lg">
+          <AddTodo />
+          <Todos />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </Provider>
+  );
 }
 
-export default App
+export default App;
